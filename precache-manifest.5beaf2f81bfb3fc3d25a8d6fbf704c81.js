@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "42b7f6af9fb8a729ddd1fac4bc979c51",
+    "revision": "a6097efdb5fc607481b41f302f8b2ded",
     "url": "/adaptative-book/index.html"
   },
   {
-    "revision": "582e4de58f4f419d1f22",
+    "revision": "a12d1b728ba28b6d0841",
     "url": "/adaptative-book/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "93715927faf335607de8",
-    "url": "/adaptative-book/static/js/2.014c7d83.chunk.js"
+    "revision": "2f0068a686f704f44155",
+    "url": "/adaptative-book/static/js/2.6be10f13.chunk.js"
   },
   {
-    "revision": "4ba1a1c11c57ed15aa68008707a3d6b4",
-    "url": "/adaptative-book/static/js/2.014c7d83.chunk.js.LICENSE.txt"
+    "revision": "89ea5e0ed13930f7b9c9c2f392e27cfe",
+    "url": "/adaptative-book/static/js/2.6be10f13.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "582e4de58f4f419d1f22",
-    "url": "/adaptative-book/static/js/main.74925be8.chunk.js"
+    "revision": "a12d1b728ba28b6d0841",
+    "url": "/adaptative-book/static/js/main.584b0b19.chunk.js"
   },
   {
     "revision": "90f7a62674dcfb0ddc3b",
