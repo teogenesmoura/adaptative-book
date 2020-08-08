@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/adaptative-book/static/css/main.5f361e03.chunk.css",
+    "main.js": "/adaptative-book/static/js/main.74925be8.chunk.js",
+    "main.js.map": "/adaptative-book/static/js/main.74925be8.chunk.js.map",
+    "runtime-main.js": "/adaptative-book/static/js/runtime-main.6de30e62.js",
+    "runtime-main.js.map": "/adaptative-book/static/js/runtime-main.6de30e62.js.map",
+    "static/js/2.014c7d83.chunk.js": "/adaptative-book/static/js/2.014c7d83.chunk.js",
+    "static/js/2.014c7d83.chunk.js.map": "/adaptative-book/static/js/2.014c7d83.chunk.js.map",
+    "index.html": "/adaptative-book/index.html",
+    "precache-manifest.ab9e2cec2805952b5419673c06541140.js": "/adaptative-book/precache-manifest.ab9e2cec2805952b5419673c06541140.js",
+    "service-worker.js": "/adaptative-book/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/adaptative-book/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.014c7d83.chunk.js.LICENSE.txt": "/adaptative-book/static/js/2.014c7d83.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/adaptative-book/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6de30e62.js",
+    "static/js/2.014c7d83.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.74925be8.chunk.js"
+  ]
+}
