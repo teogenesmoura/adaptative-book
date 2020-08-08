@@ -1,5 +1,5 @@
-import React from 'react'
-import { Grid, Fade, Divider, FormGroup, FormControlLabel, Checkbox, CheckBoxIcon, CheckBoxOutlineBlankIcon } from '@material-ui/core'
+import React, { useState, useEffect } from 'react'
+import { Grid, Fade, FormGroup, FormControlLabel, Checkbox } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
   body: {
@@ -67,18 +67,48 @@ const useStyles = makeStyles({
 
 export default function InitialPage() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     checkedBitcoin: false,
     checkedCovid: false,
   });
+  const [bitcoinIsGoingUp, setBitcoinIsGoingUp] = useState({ bitcoinIsGoingUp : false})
+
+  async function fetchData() {
+    const res = await fetch("https://api.coindesk.com/v1/bpi/historical/close.json")
+    res
+    .json()
+    .then(res => {
+      let priceByDates = res.bpi
+      {/* Next line is pure StackOverflow, oh yeah!*/}
+      let yesterdayDate = ( d => new Date(d.setDate(d.getDate()-1)) )(new Date).toISOString().slice(0,10)
+      let yesterdayPrice = priceByDates[yesterdayDate]
+      let priceSumLastMonth = Object.values(priceByDates).reduce((sum, curr) => curr + sum)
+      let numOfDaysInLastMonth = Object.keys(priceByDates).length
+      let monthAveragePrice = priceSumLastMonth / numOfDaysInLastMonth
+      yesterdayPrice >= monthAveragePrice ? setBitcoinIsGoingUp({bitcoinIsGoingUp: true}) : setBitcoinIsGoingUp({bitcoinIsGoingUp: false})
+    })
+    .catch(err => console.log(err))
+  }
+
+  useEffect(() => {
+    fetchData()
+  })
 
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
 
+  const checkBitcoinStatus = () => {
+    return "bitcoin is cool"
+  }
+
+  const checkCovidStatus = () => {
+    return "covid is not cool"
+  }
   const handleButtonClick = (event) => {
-    console.log("state of bitcoin: " + state.checkedBitcoin);
-    console.log("state of covid:" + state.checkedCovid);
+    console.log(checkBitcoinStatus());
+    console.log(checkCovidStatus());
+    // console.log("state of covid:" + state.checkedCovid);
   }
 
   return (
