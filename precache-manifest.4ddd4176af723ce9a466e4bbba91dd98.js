@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8bccf4d2d9fee561e727fa1879fb1d2f",
+    "revision": "504489a08fa6ef6116e0d98d6a1662fc",
     "url": "/adaptative-book/index.html"
   },
   {
-    "revision": "4121c6ab3479526b3e5b",
+    "revision": "d87602f4c66ff02790a6",
     "url": "/adaptative-book/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "68a20d786c4b9c2c41d4",
-    "url": "/adaptative-book/static/js/2.16487955.chunk.js"
+    "revision": "708ecee6030811f07a2e",
+    "url": "/adaptative-book/static/js/2.976f7df1.chunk.js"
   },
   {
     "revision": "89ea5e0ed13930f7b9c9c2f392e27cfe",
-    "url": "/adaptative-book/static/js/2.16487955.chunk.js.LICENSE.txt"
+    "url": "/adaptative-book/static/js/2.976f7df1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4121c6ab3479526b3e5b",
-    "url": "/adaptative-book/static/js/main.37bd62f5.chunk.js"
+    "revision": "d87602f4c66ff02790a6",
+    "url": "/adaptative-book/static/js/main.7c84192f.chunk.js"
   },
   {
     "revision": "90f7a62674dcfb0ddc3b",
