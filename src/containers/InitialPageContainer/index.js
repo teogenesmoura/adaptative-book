@@ -160,7 +160,7 @@ export default function InitialPage() {
         <Grid item xs={8} className={classes.container}>
           <h1 className={classes.title}> What is the future of text-based storytelling? </h1>
           <section className={classes.description}>
-            <p> The <i> Tale of Passion and Prowness</i> is a short-story that responds dinamically
+            <p> The <i> Party's radio</i> is a short-story that responds dinamically
             to social changes in the real world. <br></br>Are you ready to embark in an adventure directly
             influenced by the world around you? </p>
           </section>
