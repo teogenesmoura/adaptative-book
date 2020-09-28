@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Grid, Fade, FormGroup, FormControlLabel, Checkbox } from '@material-ui/core'
+import { Grid,Dialog, DialogTitle,
+          Fade, FormGroup, FormControlLabel,
+          Checkbox, CircularProgress} from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles({
   body: {
@@ -65,13 +67,45 @@ const useStyles = makeStyles({
   },
 });
 
+function SimpleDialog(props) {
+  const classes = useStyles();
+  const { onClose, open } = props;
+
+  const handleClose = () => {
+    onClose();
+  };
+
+  return (
+    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+      <DialogTitle id="simple-dialog-title">Gathering Bitcoin's information...</DialogTitle>
+        <Grid container style={{display: 'flex', justifyContent: 'center'}}>
+          <Grid item style={{alignSelf: 'center', padding: '1rem'}}>
+            <center>
+            <h5> Determining Lúcio's fate... </h5>
+            <CircularProgress />
+            </center>
+          </Grid>
+        </Grid>
+    </Dialog>
+  );
+}
+
 export default function InitialPage() {
   const classes = useStyles();
   const [state, setState] = useState({
     checkedBitcoin: false,
     checkedCovid: false,
   });
+  const [open, setOpen] = useState(false);
   const [bitcoinIsGoingUp, setBitcoinIsGoingUp] = useState({ bitcoinIsGoingUp : false})
+
+  const handleClickOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = (value) => {
+    setOpen(false)
+  }
 
   async function fetchData() {
     const res = await fetch("https://api.coindesk.com/v1/bpi/historical/close.json")
@@ -106,13 +140,21 @@ export default function InitialPage() {
     return "covid is not cool"
   }
   const handleButtonClick = (event) => {
-    console.log(checkBitcoinStatus());
-    console.log(checkCovidStatus());
-    // console.log("state of covid:" + state.checkedCovid);
+      setOpen(true)
+      sleep(4000).then(() => {
+        bitcoinIsGoingUp ?
+        window.open('https://teogenesmoura.github.io/adaptative-book-version-1/', "_blank") :
+        window.open('https://teogenesmoura.github.io/adaptative-book-version-2/', "_blank")
+      })
+  }
+
+  const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
   }
 
   return (
     <Fade in timeout={3000}>
+      <>
       <Grid container className={classes.body}>
         <Grid item xs={2} className={classes.sidebar}></Grid>
         <Grid item xs={8} className={classes.container}>
@@ -122,25 +164,14 @@ export default function InitialPage() {
             to social changes in the real world. <br></br>Are you ready to embark in an adventure directly
             influenced by the world around you? </p>
           </section>
-          <h3 className={classes.selectionTitle}>My story should be influenced by...</h3>
-          <section className={classes.selectionContainer}>
-            <FormGroup row style={{display: 'flex'}}>
-             <FormControlLabel
-               control={<Checkbox checked={state.checkedBitcoin} onChange={handleChange} name="checkedBitcoin" />}
-               label="Bitcoin volatility"
-             />
-             <FormControlLabel
-               control={<Checkbox checked={state.checkedCovid} onChange={handleChange} name="checkedCovid" />}
-               label="COVID-19 spread across the globe"
-             />
-            </FormGroup>
-          </section>
           <button className={classes.button} onClick={handleButtonClick}> Start reading! </button>
         </Grid>
         <Grid item xs={2} className={classes.sidebar}>
           <h5 className={classes.credits}><i>by Teógenes Moura</i></h5>
         </Grid>
       </Grid>
+      <SimpleDialog open={open} onClose={handleClose} />
+      </>
     </Fade>
   )
 }
