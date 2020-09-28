@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/adaptative-book/static/css/main.5f361e03.chunk.css",
-    "main.js": "/adaptative-book/static/js/main.7c84192f.chunk.js",
-    "main.js.map": "/adaptative-book/static/js/main.7c84192f.chunk.js.map",
+    "main.js": "/adaptative-book/static/js/main.43bedb67.chunk.js",
+    "main.js.map": "/adaptative-book/static/js/main.43bedb67.chunk.js.map",
     "runtime-main.js": "/adaptative-book/static/js/runtime-main.6de30e62.js",
     "runtime-main.js.map": "/adaptative-book/static/js/runtime-main.6de30e62.js.map",
     "static/js/2.976f7df1.chunk.js": "/adaptative-book/static/js/2.976f7df1.chunk.js",
     "static/js/2.976f7df1.chunk.js.map": "/adaptative-book/static/js/2.976f7df1.chunk.js.map",
     "index.html": "/adaptative-book/index.html",
-    "precache-manifest.4ddd4176af723ce9a466e4bbba91dd98.js": "/adaptative-book/precache-manifest.4ddd4176af723ce9a466e4bbba91dd98.js",
+    "precache-manifest.4762816f982e93a54178c456b7b3edd5.js": "/adaptative-book/precache-manifest.4762816f982e93a54178c456b7b3edd5.js",
     "service-worker.js": "/adaptative-book/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/adaptative-book/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.976f7df1.chunk.js.LICENSE.txt": "/adaptative-book/static/js/2.976f7df1.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.6de30e62.js",
     "static/js/2.976f7df1.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.7c84192f.chunk.js"
+    "static/js/main.43bedb67.chunk.js"
   ]
 }
