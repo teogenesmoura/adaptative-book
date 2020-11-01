@@ -1,68 +1,105 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# dynamic-haiku
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/labhackercd/linguagem-simples-front/">
+    <img src="https://i.ibb.co/tYd2fq2/acompanhe.png" alt="acompanhe" border="0">
+  </a>
+</p>
 
-In the project directory, you can run:
+<a href="https://github.com/labhackercd/linguagem-simples-front/#About-the-project"> Click here to see the English version </a>
 
-### `yarn start`
+## Sobre o projeto
+<center><img src="https://media.giphy.com/media/GDzLnVXvO67Q0hTloy/giphy.gif"></center>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O projeto Linguagem Simples (posteriormente renomeado para Plenário Simples) é uma iniciativa do <a href="http://labhackercd.leg.br">Laboratório Hacker da Câmara dos Deputados</a> para tornar mais fácil a compreensão da rotina dos deputados e das discussões que acontecem no plenário da Câmara, por meio de uma linha do tempo que cobre os eventos que acontecem no plenário da câmara em tempo real. Este repositório contém o código **de front-end** da plataforma que permite aos jornalistas da Casa inserir novas atualizações na linha do tempo. Além disso, este é um projeto derivado dos levantamentos feitos durante o <a href="https://medium.com/labhacker/eu-tu-ela-ele-n%C3%B3s-planejamos-266deed2ddfb?source=collection_home---5------9-----------------------"> Nós do Lab </a>, respondendo aos desafios levantados pela sociedade para a gestão de transparência, participação e cidadania do legislativo brasileiro.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Pré-requisitos
+É necessário ter instalados os seguintes softwares para executar utilizando o Docker:
+* [Docker](https://docs.docker.com/engine/install/) versão 19.03.6
+* [Docker-Compose](https://docs.docker.com/compose/install/) versão 1.25.5
 
-### `yarn test`
+Para executar localmente, é necessário:
+* [Node](https://nodejs.org/en/) versão 10 ou superior
+* [React](https://reactjs.org/) versão 16.13.1
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Comandos para executar o projeto
+1. Clone o projeto
+```bash
+git clone https://github.com/labhackercd/linguagem-simples-backend.git
+```
+2. Entre dentro da pasta raiz do projeto
+```bash
+cd linguagem-simples-front
+```
 
-### `yarn build`
+3. Execute o comando para iniciar os containers
+```bash
+docker-compose up
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Para versão de desenvolvimento, execute o comando
+```bash
+docker-compose up dev
+```
+**A API neste momento já vai estar rodando na porta 3000 do localhost.**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Como rodar os testes do projeto
+- Com o projeto já em execução rode o comando:
+```bash
+sudo docker-compose exec dev /bin/bash -c "npm run test -- --coverage --watchAll=false"
+```
+## Documentação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Devido a arquitetura escolhida pela equipe (com front e backend desacoplados entre si), e por uma questão de organização, o desenvolvimento deste projeto utilizou a metodologia ágil Scrum, e os documentos gerados podem ser acessados na nossa <a href="https://github.com/labhackercd/linguagem-simples-backend/wiki"> Wiki </a>
 
-### `yarn eject`
+<hr>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## About the project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<center><img src="https://media.giphy.com/media/GDzLnVXvO67Q0hTloy/giphy.gif"></center>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The Linguagem Simples (<i>Plain Language</i>) project (which was later rebranded to Plenário Simples (<i> Simple Plenary </i>) is an initiative of the <a href="http://labhackercd.leg.br">National Congress Of Brazil's Laboratório Hacker</a> (<i> Hacker Lab </i>) to make understanding of the day-to-day routine of the representatives and discussions of the brazilian legislative house more accessible to citizens by providing them with an easy-to-understand timeline of events happening in plenary's sessions. This repo contains **the front-end** code for the platform which allows in-house journalists to update the timeline with content (such as text, image, tweets and so on) that allow for citizens to have a better understanding of the law-making process. This project derives directly from the
+<a href="https://medium.com/labhacker/eu-tu-ela-ele-n%C3%B3s-planejamos-266deed2ddfb?source=collection_home---5------9-----------------------"> Nós do Lab </a> event, which engaged multiple sectors of the society to help us disrupt the work processes behind the Brazilian Legislative House with a focus on transparency, participation and citizenship.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Pre-requisites
 
-## Learn More
+In order to run the project via Docker the following software packages need to be installed:
+* [Docker](https://docs.docker.com/engine/install/) version 19.03.6
+* [Docker-Compose](https://docs.docker.com/compose/install/) version 1.25.5
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In order to run the project locally the following software packages are necessary:
+* [Node](https://nodejs.org/en/) version 10 or higher
+* [React](https://reactjs.org/) version 16.13.1
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to run the project
 
-### Code Splitting
+1. Clone this repo
+```bash
+git clone https://github.com/labhackercd/linguagem-simples-backend.git
+```
+2. Enter the project's root directory
+```bash
+cd linguagem-simples-front
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+3. Start up the docker instance
+```bash
+docker-compose up
+```
 
-### Analyzing the Bundle Size
+4. To run the development version, run the following command
+```bash
+docker-compose up dev
+```
+**How to run tests.**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- run the following command when the Docker container is already up:
+```bash
+sudo docker-compose exec dev /bin/bash -c "npm run test -- --coverage --watchAll=false"
+```
 
-### Making a Progressive Web App
+## Documentation
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Due to the decoupled architecture chosen by team (with separate repositories for back and front-end code) and to the use of the SCRUM agile methodology, the documentation of this project happened in our <a href="https://github.com/labhackercd/linguagem-simples-backend/wiki"> Wiki </a>
